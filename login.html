@@ -25,7 +25,7 @@
         email: admin@sample.com
         password: admin
         -->
-          <h1 class="text-center display-5">
+          <h1 class="text-center display-3 fragranticarForm">
             Perfume is the key to our memories
           </h1>
 
@@ -48,7 +48,16 @@
               type="button"
               onclick="loginCredentials()"
               class="btn btn-dark"
-              value="Im in!"
+              value="Login"
+            />
+          </div>
+          <div class="social">
+            <input
+              type="button"
+              onclick="
+              window.location.href = './index.html'"
+              class="btn btn-dark"
+              value="Go Back"
             />
           </div>
           <!-- Error Alert Login-->
@@ -103,11 +112,7 @@
         <div class="modal-content text-center">
           <div class="modal-body">Invalid Email</div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-light"
-              data-bs-dismiss="modal"
-            >
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
               Close
             </button>
           </div>
