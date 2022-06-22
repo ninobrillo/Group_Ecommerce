@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fragrantica</title>
+    <link rel="stylesheet" href="./source/css/login_glass.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container col-lg-3 mt-5 pt-5">
+      <div class="row mt-5">
+        <form>
+          <!-- hardcoded login credentials
+        email: admin@sample.com
+        password: admin
+        -->
+          <h1 class="text-center display-5">
+            Perfume is the key to our memories
+          </h1>
+
+          <input
+            type="text"
+            class="text-center"
+            placeholder="Email Address"
+            id="loginEmail"
+          />
+
+          <input
+            type="password"
+            class="text-center"
+            placeholder="Password"
+            id="loginPassword"
+          />
+
+          <div class="social">
+            <input
+              type="button"
+              onclick="loginCredentials()"
+              class="btn btn-dark"
+              value="Im in!"
+            />
+          </div>
+          <!-- Error Alert Login-->
+          <div
+            class="alert alert-danger alert-dismissible fade show d-none"
+            id="loginCredentialsWrong"
+          >
+            <h2 class="text-center">
+              <strong>Error!</strong> Incorrect Email Address
+            </h2>
+          </div>
+
+          <div
+            class="d-none alert alert-danger alert-dismissible fade show"
+            id="loginCredentialsWrong"
+          >
+            <strong>Error!</strong> Incorrect Password
+          </div>
+
+          <!-- Error Alert Email-->
+
+          <div
+            class="alert alert-danger alert-dismissible fade show d-none"
+            id="loginCredentialsEmailError"
+          >
+            <strong>Error!</strong> Invalid Email
+          </div>
+
+          <!-- Success Alert -->
+          <div
+            class="alert alert-success alert-dismissible fade show d-none"
+            id="loginCredentialsCorrect"
+          >
+            <strong>Success!</strong> Your message has been sent successfully.
+          </div>
+
+          <!-- End of Login -->
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Invalid Email -->
+    <div
+      class="modal fade"
+      id="invalidEmailLogin"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-body">Invalid Email</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-light"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Modal-->
+
+    <!-- Modal Incorrect Credentials -->
+    <div
+      class="modal fade"
+      id="invalidCredentialLogin"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-body">Incorrect email or password</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Modal-->
+    <script src="./source/js/script.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
