@@ -1,8 +1,10 @@
+
+
 loginCredentials = () => {
 
-    const email = document.getElementById('loginEmail').value;
-    const password = document.getElementById('loginPassword').value;
 
+    var email = document.getElementById('loginEmail').value;
+    var password = document.getElementById('loginPassword').value;
 
     console.log(email);
     console.log(password);
@@ -22,38 +24,26 @@ loginCredentials = () => {
 
     } else {
 
-        console.log("trigger Email Error")
-
-
-        var a = document.getElementById("loginCredentialsEmailError");
-        a.classList.remove("d-none");
+        $('#invalidEmailLogin').modal('show');
     }
 }
 
 
-
-
-console.log("trigger A");
 
 function loginAlertCorrect(result) {
 
     if (result == true) {
-        var a = document.getElementById("loginCredentialsCorrect");
-        a.classList.remove("d-none");
 
-        var b = document.getElementById("loginCredentialsWrong");
-        b.classList.add("d-none");
-        console.log("Login Credential Correct")        
-        window.location.href = "./featured_items.htmlfetc";
+        console.log("Login Credential Correct")
+        window.location.href = "./index.html";
+
     } else {
-        var a = document.getElementById("loginCredentialsWrong");
-        a.classList.remove("d-none");
 
-        var b = document.getElementById("loginCredentialsCorrect");
-        b.classList.add("d-none");
-        console.log("Login Credential Wrong")
+        $('#invalidCredentialLogin').modal('show');
     }
 }
+
+
 
 // \S+@\S no white space and 1 @ only
 // \S+\.\S no white space and 1 . only
